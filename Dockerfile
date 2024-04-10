@@ -6,4 +6,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-CMD ["echo", "'hardhat'"]
+
+RUN npm install --save-dev hardhat
+
+CMD ["npx", "hardhat", "--version"]
